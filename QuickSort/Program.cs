@@ -43,7 +43,14 @@ namespace QuickSort
             }
         }
 
-
+        //swap the element at index x with element at index y
+        void swap(int x, int y)
+        {
+            int temp;
+            temp = arr[x];
+            arr[x] = arr[y];
+            arr[y] = temp;
+        }
 
 
         static void Main(string[] args)
