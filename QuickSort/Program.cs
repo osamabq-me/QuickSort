@@ -87,7 +87,7 @@ namespace QuickSort
 
                 if (i < j)//If the greater element is on the left of the elemnt
                 {
-                    //swap the element at index i whit the elemnent at index j
+                    //swap the element at index i with the elemnent at index j
                     swap(i, j);
                     mov_count++;
                 }
@@ -106,6 +106,25 @@ namespace QuickSort
             //sort the list on the right of pivot using quick sort
             q_sort(j+1,high);
 
+        }
+
+        public void display()
+        {
+ 
+            Console.WriteLine("\n---------------------------");
+            Console.WriteLine("Sorted array Elements");
+            Console.WriteLine("---------------------------");
+            for (int j = 0; j < n; j++)
+            {
+                Console.WriteLine(arr[j]);
+            }
+            Console.WriteLine("Number of comparisons: " + cmp_count);
+            Console.WriteLine("Number of data movments: " + mov_count);
+        }
+
+        int getsize()
+        {
+            return n;
         }
 
 
