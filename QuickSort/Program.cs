@@ -55,7 +55,7 @@ namespace QuickSort
         public void q_sort(int low,int high)
         {
             int pivot, i, j;
-            if (low < high)
+            if (low > high)
                 return;
 
             //Partition the list into two parts:
@@ -81,9 +81,9 @@ namespace QuickSort
                 while ((arr[j] > pivot) && (j >= low))
                 {
                     j--;
-                    cmp_count--;
+                    cmp_count++;
                 }
-                cmp_count--;
+                cmp_count++;
 
                 if (i < j)//If the greater element is on the left of the elemnt
                 {
@@ -132,6 +132,19 @@ namespace QuickSort
 
         static void Main(string[] args)
         {
+            //Declaring the object of the class
+            Program mylist = new Program();
+            //Accept array elements
+            mylist.input();
+            //Calling the sorting function
+            //frist call to Quick sort Algorithm
+            mylist.q_sort(0,mylist.getsize() - 1);
+            //Dispaly sorted array
+            mylist.display();
+            // To exit from the console
+            Console.WriteLine("\n\n Prees Enter to exit.");
+            Console.ReadKey();
+
         }
     }
 }
