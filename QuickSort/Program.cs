@@ -58,15 +58,26 @@ namespace QuickSort
             if (low < high)
                 return;
 
-            //Partition the list into teo parts:
+            //Partition the list into two parts:
             //one containing elements less that or equal to pivot
-            //Outher conntainning elementscgrater than pivot
+            //Outher conntainning elements greater than pivot
 
             i = low +1;
             j = high;
 
             pivot = arr[low];
 
+            while (i <= j)
+            {
+                //search for element greate than pivot
+                while ((arr[i]<= pivot) && (i<= high))
+                {
+                    i++;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+            }
 
 
         }
