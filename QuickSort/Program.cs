@@ -19,7 +19,16 @@ namespace QuickSort
 
         void input()
         {
-
+            while (true)
+            {
+                Console.WriteLine("Enter the number of elements in arrauy :");
+                string s = Console.ReadLine();
+                n = Int32.Parse(s);
+                if (n <= 20)
+                    break;
+                else
+                    Console.WriteLine("\nArray can have maximam 20 elements");
+            }
         }
 
         static void Main(string[] args)
