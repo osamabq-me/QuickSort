@@ -27,9 +27,24 @@ namespace QuickSort
                 if (n <= 20)
                     break;
                 else
-                    Console.WriteLine("\nArray can have maximam 20 elements");
+                    Console.WriteLine("\nArray can have maximam 20 elements \n");
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("Enter elements to the array");
+            Console.WriteLine("---------------------------");
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("<" + (i + 1) + ">");
+                string s1 = Console.ReadLine();
+                arr[i] = Int32.Parse(s1);
             }
         }
+
+
+
 
         static void Main(string[] args)
         {
