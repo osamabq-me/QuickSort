@@ -77,6 +77,15 @@ namespace QuickSort
                 }
                 cmp_count++;
 
+                //search for element smaller than pivot
+                while ((arr[j] > pivot) && (j >= low))
+                {
+                    j--;
+                    cmp_count--;
+                }
+                cmp_count--;
+
+
             }
 
 
